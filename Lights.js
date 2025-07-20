@@ -1,9 +1,9 @@
 const lights=require("./const");
-const https = require('https');
+const https = require('http');
 const url="http://192.168.0.2/forms.htm";
 
 function httpGet(url, callback) {
-    https.get(url, (res) => {
+    http.get(url, (res) => {
       let data = '';
   
       // Ricevo i dati a pezzi
