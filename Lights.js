@@ -1,5 +1,5 @@
 const lights=require("./const");
-const https = require('http');
+const http = require('http');
 const url="http://192.168.0.2/forms.htm";
 
 function httpGet(url, callback) {
