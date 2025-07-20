@@ -7,25 +7,29 @@ light.ledNotte(false);
 
 function scheduleNextRun(hour, minute, callback) {
   const now = new Date();
-  const next = new Date(now);
+  const target = new Date(now);
 
-  next.setDate(now.getDate() + 1); // giorno dopo
-  next.setHours(hour, minute, 0, 0); // ora e minuto obiettivo
+  target.setHours(hour, minute, 0, 0);
 
-  const delay = next.getTime() - now.getTime();
+  // Se l'ora target è già passata oggi, sposto al giorno dopo
+  if (target <= now) {
+    target.setDate(target.getDate() + 1);
+  }
 
-  console.log(`Schedulo il job per: ${next}`);
+  const delay = target.getTime() - now.getTime();
+
+  console.log(`Schedulo il job per: ${target}`);
   console.log(`Delay in ms: ${delay}`);
 
   setTimeout(() => {
     callback();
 
-    // Se vuoi ri-schedulare automaticamente per il giorno dopo:
-    scheduleNextRun(hour, minute, callback);
+    // Ri-schedula automaticamente per lo stesso orario il giorno dopo
+    scheduleRun(hour, minute, callback);
   }, delay);
 }
 
-  scheduleNextRun(20, 35, function(){
+  scheduleNextRun(20, 40, function(){
       light.ledSoggiorno(true);
   });
 
