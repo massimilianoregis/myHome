@@ -5,7 +5,7 @@ var light = new Lights();
 light.ledSoggiorno(false);
 light.ledNotte(false);
 
-schedule.scheduleJob({hour: 20, minute: 0}, function(){
+schedule.scheduleJob({hour: 20, minute: 15}, function(){
     light.ledSoggiorno(true);
   });
 schedule.scheduleJob({hour: 22, minute: 0}, function(){

@@ -7,6 +7,7 @@ class Lights{
         axios.get(`${url}?led${lights.LED_SOGGIORNO}=${value?'1':'0'}`)
     }
     ledNotte(value){
+        console.log(`${url}?led${lights.LED_NOTTE}=${value?'1':'0'}`)
         axios.get(`${url}?led${lights.LED_NOTTE}=${value?'1':'0'}`)
     }
 }
