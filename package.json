@@ -1,0 +1,17 @@
+{
+  "name": "myhome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Lights.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@abandonware/noble": "^1.9.2-26",
+    "axios": "^1.10.0",
+    "node-schedule": "^2.1.1",
+    "sharp": "^0.34.2"
+  }
+}

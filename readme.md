@@ -1,0 +1,1 @@
+accedere e spegnere le luci di casa tramite un programma nodejs installato su cellulare
