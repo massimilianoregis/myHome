@@ -25,7 +25,7 @@ function scheduleNextRun(hour, minute, callback) {
   }, delay);
 }
 
-  scheduleNextRun(20, 32, function(){
+  scheduleNextRun(20, 35, function(){
       light.ledSoggiorno(true);
   });
 
