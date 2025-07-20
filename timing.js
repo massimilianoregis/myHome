@@ -2,7 +2,8 @@ const schedule = require('node-schedule');
 
 var Lights= require("./Lights")
 var light = new Lights();
-
+light.ledSoggiorno(false);
+light.ledNotte(false);
 
 schedule.scheduleJob({hour: 20, minute: 0}, function(){
     light.ledSoggiorno(true);
