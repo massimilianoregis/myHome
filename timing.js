@@ -25,7 +25,7 @@ function scheduleNextRun(hour, minute, callback) {
     callback();
 
     // Ri-schedula automaticamente per lo stesso orario il giorno dopo
-    scheduleRun(hour, minute, callback);
+    scheduleNextRun(hour, minute, callback);
   }, delay);
 }
 
